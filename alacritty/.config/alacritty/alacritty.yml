@@ -52,7 +52,7 @@ colors:
     background: "#282a36"
     foreground: "#eff0eb"
   cursor:
-    cursor: "#97979b"
+    cursor: "#eff0eb"
   selection:
     text: "#282a36"
     background: "#feffff"
