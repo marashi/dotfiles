@@ -41,6 +41,10 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+-- nvim-tree: disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
