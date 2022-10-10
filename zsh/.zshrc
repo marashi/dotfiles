@@ -121,6 +121,7 @@ alias tn="t new -t"
 alias vim="nvim"
 
 alias ws="cd ~/Workspace"
+alias df="cd ~/dotfiles"
 alias ll='ls -FGlAhp' 
 alias grep="grep --color=auto"
 alias reload='source ~/.zshrc'
@@ -130,7 +131,15 @@ alias path='echo -e ${PATH//:/\\n}'
 alias ~="cd ~"
 #alias python="python3"
 alias cat="bat" # bat needs to be installed via brew
+alias lg="lazygit"
+
+
+export VISUAL="nvim"
+export EDITOR="$VISUAL"
+
+export XDG_CONFIG_HOME="$HOME/.config" #base directory relative to which user-specific configuration files should be store
 
 eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
+
