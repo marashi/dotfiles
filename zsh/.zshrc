@@ -121,7 +121,7 @@ alias tn="t new -t"
 alias vim="nvim"
 
 alias ws="cd ~/Workspace"
-alias df="cd ~/dotfiles"
+alias dot="cd ~/dotfiles"
 alias ll='ls -FGlAhp' 
 alias grep="grep --color=auto"
 alias reload='source ~/.zshrc'
