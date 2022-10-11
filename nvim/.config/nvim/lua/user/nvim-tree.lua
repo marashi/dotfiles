@@ -11,32 +11,71 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
+  disable_netrw = true,
+  hijack_netrw = true,
+  open_on_setup = true,
+  ignore_ft_on_setup = { "alpha" },
+  hijack_cursor = true,
+  hijack_unnamed_buffer_when_opening = false,
+  update_cwd = true,
   update_focused_file = {
     enable = true,
-    update_cwd = true,
+    update_cwd = false,
+  },
+  view = {
+    adaptive_size = true,
+    side = "left",
+    width = 40,
+    hide_root_folder = true,
+    signcolumn = "yes"
+  },
+  git = {
+    enable = false,
+    ignore = true,
+  },
+  filesystem_watchers = {
+    enable = true,
+  },
+  actions = {
+    open_file = {
+      resize_window = true,
+    },
   },
   renderer = {
-    root_folder_modifier = ":t",
+    highlight_git = false,
+    highlight_opened_files = "none",
+
+    indent_markers = {
+      enable = false,
+    },
+
     icons = {
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = false,
+      },
+
       glyphs = {
         default = "",
         symlink = "",
         folder = {
+          default = "",
+          empty = "",
+          empty_open = "",
+          open = "",
+          symlink = "",
+          symlink_open = "",
           arrow_open = "",
           arrow_closed = "",
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-          symlink = "",
-          symlink_open = "",
         },
         git = {
-          unstaged = "",
-          staged = "S",
+          unstaged = "✗",
+          staged = "✓",
           unmerged = "",
           renamed = "➜",
-          untracked = "U",
+          untracked = "★",
           deleted = "",
           ignored = "◌",
         },
@@ -45,23 +84,12 @@ nvim_tree.setup {
   },
   diagnostics = {
     enable = true,
-    show_on_dirs = true,
+    show_on_dirs = false,
     icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
+      hint = " ",
+      info = " ",
+      warning = " ",
+      error = " ",
     },
-  },
-  view = {
-    width = 40,
-    side = "left",
-    mappings = {
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
-  },
+  }
 }
