@@ -139,6 +139,8 @@ export EDITOR="$VISUAL"
 
 export XDG_CONFIG_HOME="$HOME/.config" #base directory relative to which user-specific configuration files should be store
 
+eval "$(zoxide init zsh)"
+
 eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
