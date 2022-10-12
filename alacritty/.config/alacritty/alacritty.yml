@@ -3,8 +3,8 @@ live_config_reload: true
 window:
   opacity: 0.97
   padding:
-    x: 18
-    y: 16
+    x: 16
+    y: 15
   dynamic_padding: false
   decorations: buttonless
 
@@ -55,7 +55,7 @@ colors:
     cursor: "#eff0eb"
   selection:
     text: "#282a36"
-    background: "#feffff"
+    background: "#9aedfe"
   normal:
     black: "#282a36"
     red: "#ff5c57"
