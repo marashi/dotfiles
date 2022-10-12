@@ -5,12 +5,22 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-	[[                               __                ]],
-	[[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-	[[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-	[[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-	[[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+	 [[      .            .      ]],
+	 [[    .,;'           :,.    ]],
+	 [[  .,;;;,,.         ccc;.  ]],
+	 [[.;c::::,,,'        ccccc: ]],
+	 [[.::cc::,,,,,.      cccccc.]],
+	 [[.cccccc;;;;;;'     llllll.]],
+	 [[.cccccc.,;;;;;;.   llllll.]],
+	 [[.cccccc  ';;;;;;'  oooooo.]],
+	 [['lllllc   .;;;;;;;.oooooo']],
+	 [['lllllc     ,::::::looooo']],
+	 [['llllll      .:::::lloddd']],
+	 [[.looool       .;::coooodo.]],
+	 [[  .cool         'ccoooc.  ]],
+	 [[    .co          .:o:.    ]],
+	 [[      .           .'      ]],
+	 [[                          ]],
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -20,7 +30,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("d", "  Dot Files", ":e ~/dotfiles/ <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/dotfiles/nvim/.config/nvim/lua/user/_plugins.lua <CR>"),
-	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+	dashboard.button("q", "  Quit", ":qa<CR>"),
 }
 
 local function footer()
@@ -29,7 +39,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "marashi.me"
+	return "▌│█║▌║▌║ П Σ Ө V I M ║▌║▌║█│▌"
 end
 
 dashboard.section.footer.val = footer()
@@ -41,3 +51,23 @@ dashboard.section.buttons.opts.hl = "Keyword"
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.opts)
+
+
+-- [
+-- \ '     ________ ;;     ________',
+-- \ '    /********\;;;;  /********\',
+-- \ '    \********/;;;;;;\********/',
+-- \ '     |******|;;;;;;;;/*****/',
+-- \ '     |******|;;;;;;/*****/''',
+-- \ '    ;|******|;;;;/*****/'';',
+-- \ '  ;;;|******|;;/*****/'';;;;;',
+-- \ ';;;;;|******|/*****/'';;;;;;;;;',
+-- \ '  ;;;|***********/'';;;;;;;;;',
+-- \ '    ;|*********/'';;;;;;;;;',
+-- \ '     |*******/'';;;;;;;;;',
+-- \ '     |*****/'';;;;;;;;;',
+-- \ '     |***/'';;;;;;;;;',
+-- \ '     |*/''   ;;;;;;',
+-- \ '              ;;',
+-- \]
+

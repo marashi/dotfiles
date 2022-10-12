@@ -11,7 +11,7 @@ lualine.setup({
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
       statusline = {
-        'NvimTree'
+        'NvimTree', 'alpha'
       },
       winbar = {
         'NvimTree'
