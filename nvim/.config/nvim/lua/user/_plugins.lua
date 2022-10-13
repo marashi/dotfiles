@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- UI / Colorschemes
-  use 'folke/tokyonight.nvim'
+  use "EdenEast/nightfox.nvim"
   use "goolord/alpha-nvim"
   use "kyazdani42/nvim-web-devicons"
   use 'nvim-lualine/lualine.nvim'

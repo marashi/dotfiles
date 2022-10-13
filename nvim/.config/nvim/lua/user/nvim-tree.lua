@@ -42,6 +42,7 @@ nvim_tree.setup {
     },
   },
   renderer = {
+    group_empty = true,
     highlight_git = false,
     highlight_opened_files = "none",
 

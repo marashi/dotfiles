@@ -3,8 +3,10 @@ if not status_ok then
   return
 end
 
- colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
-local util = require("tokyonight.util")
+-- Returns the palette of the specified colorscheme
+-- local palette = require('nightfox.palette').load("nightfox")
+
+-- print(vim.inspect(palette))
 
 
 bufferline.setup {
