@@ -43,3 +43,4 @@ luac.out
 **/plugin/packer_compiled.lua
 **/tmux/plugins/
 **/lazygit/state.yml
+**/tmux-client-*.log
