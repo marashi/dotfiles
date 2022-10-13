@@ -48,6 +48,8 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "windwp/nvim-autopairs"
   use "tpope/vim-surround"
+  use "numToStr/Comment.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- UI / Colorschemes
   use 'folke/tokyonight.nvim'

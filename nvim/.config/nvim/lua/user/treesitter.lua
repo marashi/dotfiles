@@ -16,4 +16,8 @@ local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 		enable = true,
 	},
    indent = { enable = true, disable = { "yaml" } },
+   context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
  }
