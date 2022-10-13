@@ -1,4 +1,4 @@
-hs.alert.show("HS Config loaded...")
+hs.alert.show("HS config loaded...✨")
 --# constants
 super = "⌃⌥"
 hyper = {"cmd", "alt", "ctrl"}
@@ -103,7 +103,7 @@ hs.hotkey.bind(hyper, hs.keycodes.map["f"], function() yabai({"-m", "window", "-
 
 
 --# toggle float layout for window
-hs.hotkey.bind(super, hs.keycodes.map["f"], function() yabai({"-m", "window", "--toggle", "float"}) toast("🎚☁️") end)  --["/"]
+hs.hotkey.bind(super, hs.keycodes.map["f"], function() yabai({"-m", "window", "--toggle", "float"}) toast("🪄") end)  --["/"]
 
 --# change window focus to direction
 hs.hotkey.bind(super, hs.keycodes.map["right"], function() yabai({"-m", "window", "--focus", "east"}) toast("👉") end)  --[";"]
