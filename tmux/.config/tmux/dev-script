@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# rename it to dev and put it in ~/bin folder
+# make it executable: chmod +x dev
+
+# DAM SESSION
+SESSION_1="DAM"
+DAM_PATH="/Users/marashi/workspace/dam"
+SESSION_1_EXISTS=$(tmux list-sessions | grep $SESSION_1)
+if [ "$SESSION_1_EXISTS" = "" ]
+then
+  tmux new-session -d -s $SESSION_1
+
+  WINDOW_1_NAME="dam"
+  tmux rename-window -t $SESSION_1:1 $WINDOW_1_NAME
+  tmux send-key -t $WINDOW_1_NAME "cd $DAM_PATH" C-m 'clear' C-m 'vim package.json' C-m
+
+  WINDOW_2_NAME="git"
+  tmux new-window -t $SESSION_1:2 -n $WINDOW_2_NAME
+  tmux send-key -t $WINDOW_2_NAME "cd $DAM_PATH" C-m 'clear' C-m 'lg' C-m
+
+  WINDOW_3_NAME="term"
+  tmux new-window -t $SESSION_1:3 -n $WINDOW_3_NAME
+  tmux send-key -t $WINDOW_3_NAME "cd $DAM_PATH" C-m 'clear' C-m
+
+  tmux select-window -t $SESSION_1:1
+fi
+
+#RSS SESSION
+SESSION_2="RSS"
+SESSION_2_EXISTS=$(tmux list-sessions | grep $SESSION_2)
+if [ "$SESSION_2_EXISTS" = "" ]
+then
+  RSS_PATH="/Users/marashi/workspace/rogers-self-serve"
+  PROFILE_PATH="/Users/marashi/workspace/self-serve-profile-settings"
+
+  tmux new-session -d -s $SESSION_2
+
+  WINDOW_1_NAME="RSS"
+  tmux rename-window -t $SESSION_2:1 $WINDOW_1_NAME
+  tmux send-key -t $WINDOW_1_NAME "cd $RSS_PATH" C-m 'clear' C-m 'vim package.json' C-m
+
+  WINDOW_2_NAME="Profile"
+  tmux new-window -t $SESSION_2:2 -n $WINDOW_2_NAME
+  tmux send-key -t $WINDOW_2_NAME "cd $PROFILE_PATH" C-m 'clear' C-m 'vim package.json' C-m
+
+  WINDOW_3_NAME="git"
+  tmux new-window -t $SESSION_2:3 -n $WINDOW_3_NAME
+  tmux send-key -t $WINDOW_3_NAME "cd $RSS_PATH" C-m 'clear' C-m 'lg' C-m
+
+  WINDOW_4_NAME="term"
+  tmux new-window -t $SESSION_2:4 -n $WINDOW_4_NAME
+  tmux send-key -t $WINDOW_4_NAME "cd $RSS_PATH" C-m 'clear' C-m
+  tmux split-window -h -p 50
+  tmux send-key -t $WINDOW_4_NAME "cd $PROFILE_PATH" C-m 'clear' C-m
+
+  tmux select-window -t $SESSION_2:1
+fi
+
+#FSS SESSION
+SESSION_3="FSS"
+SESSION_3_EXISTS=$(tmux list-sessions | grep $SESSION_3)
+if [ "$SESSION_3_EXISTS" = "" ]
+then
+  FSS_PATH="/Users/marashi/workspace/fido-self-serve"
+  PROFILE_PATH="/Users/marashi/workspace/self-serve-profile-settings"
+
+  tmux new-session -d -s $SESSION_3
+
+  WINDOW_1_NAME="FSS"
+  tmux rename-window -t $SESSION_3:1 $WINDOW_1_NAME
+  tmux send-key -t $WINDOW_1_NAME "cd $FSS_PATH" C-m 'clear' C-m 'vim package.json' C-m
+
+  WINDOW_2_NAME="Profile"
+  tmux new-window -t $SESSION_3:2 -n $WINDOW_2_NAME
+  tmux send-key -t $WINDOW_2_NAME "cd $PROFILE_PATH" C-m 'clear' C-m 'vim package.json' C-m
+
+  WINDOW_3_NAME="git"
+  tmux new-window -t $SESSION_3:3 -n $WINDOW_3_NAME
+  tmux send-key -t $WINDOW_3_NAME "cd $FSS_PATH" C-m 'clear' C-m 'lg' C-m
+
+  WINDOW_4_NAME="term"
+  tmux new-window -t $SESSION_3:4 -n $WINDOW_4_NAME
+  tmux send-key -t $WINDOW_4_NAME "cd $FSS_PATH" C-m 'clear' C-m
+  tmux split-window -h -p 50
+  tmux send-key -t $WINDOW_4_NAME "cd $PROFILE_PATH" C-m 'clear' C-m
+  
+  tmux select-window -t $SESSION_3:1
+fi
+
+tmux attach-session -t $SESSION_1
