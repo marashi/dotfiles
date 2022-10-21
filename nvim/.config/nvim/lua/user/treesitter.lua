@@ -4,7 +4,30 @@ local status_ok, configs = pcall(require, "nvim-treesitter.configs")
  end
 
  configs.setup {
-   ensure_installed = "all", -- one of "all", or a list of languages
+   ensure_installed = {
+    "bash",
+    "comment",
+    "css",
+    "diff",
+    "dockerfile",
+    "gitignore",
+    "go",
+    "graphql",
+    "html",
+    "http",
+    "javascript",
+    "json",
+    "jsdoc",
+    "lua",
+    "markdown",
+    "python",
+    "rust",
+    "scss",
+    "solidity",
+    "tsx",
+    "typescript",
+    "yaml"
+   }, -- one of "all", or a list of languages
    sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
    ignore_install = { "" }, -- List of parsers to ignore installing
    highlight = {
