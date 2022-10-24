@@ -85,6 +85,11 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+    live_grep = {
+      additional_args = function(opts)
+        return {"--hidden"}
+      end
+    },
   },
   extensions = {
     -- Your extension configuration goes here:
