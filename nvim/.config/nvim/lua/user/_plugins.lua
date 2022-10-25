@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "BurntSushi/ripgrep" -- needed for telescope
+  use "tpope/vim-unimpaired"
 
   -- UI / Colorschemes
   use "EdenEast/nightfox.nvim"
