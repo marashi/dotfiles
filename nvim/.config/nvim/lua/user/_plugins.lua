@@ -61,6 +61,7 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("norcalli/nvim-colorizer.lua")
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
