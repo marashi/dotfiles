@@ -109,7 +109,7 @@ local normal_mappings = {
 
   g = {
     name = "Git",
-    g = { "<cmd>DiffviewOpen<CR>", "Open Diff" },
+    d = { "<cmd>DiffviewOpen<CR>", "Open Diff" },
     x = { "<cmd>DiffviewClose<CR>", "Close Diff" },
     l = { "<cmd>DiffviewFileHistory<CR>", "Current Branch History" },
     h = { "<cmd>DiffviewFileHistory %<CR>", "Current File History" },
@@ -127,10 +127,10 @@ local normal_mappings = {
     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
-    },
+    -- d = {
+    --   "<cmd>Gitsigns diffthis HEAD<cr>",
+    --   "Diff",
+    -- },
   },
 
   l = {
