@@ -5,22 +5,22 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-	 [[      .            .      ]],
-	 [[    .,;'           :,.    ]],
-	 [[  .,;;;,,.         ccc;.  ]],
-	 [[.;c::::,,,'        ccccc: ]],
-	 [[.::cc::,,,,,.      cccccc.]],
-	 [[.cccccc;;;;;;'     llllll.]],
-	 [[.cccccc.,;;;;;;.   llllll.]],
-	 [[.cccccc  ';;;;;;'  oooooo.]],
-	 [['lllllc   .;;;;;;;.oooooo']],
-	 [['lllllc     ,::::::looooo']],
-	 [['llllll      .:::::lloddd']],
-	 [[.looool       .;::coooodo.]],
-	 [[  .cool         'ccoooc.  ]],
-	 [[    .co          .:o:.    ]],
-	 [[      .           .'      ]],
-	 [[                          ]],
+	[[      .            .      ]],
+	[[    .,;'           :,.    ]],
+	[[  .,;;;,,.         ccc;.  ]],
+	[[.;c::::,,,'        ccccc: ]],
+	[[.::cc::,,,,,.      cccccc.]],
+	[[.cccccc;;;;;;'     llllll.]],
+	[[.cccccc.,;;;;;;.   llllll.]],
+	[[.cccccc  ';;;;;;'  oooooo.]],
+	[['lllllc   .;;;;;;;.oooooo']],
+	[['lllllc     ,::::::looooo']],
+	[['llllll      .:::::lloddd']],
+	[[.looool       .;::coooodo.]],
+	[[  .cool         'ccoooc.  ]],
+	[[    .co          .:o:.    ]],
+	[[      .           .'      ]],
+	[[                          ]],
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -34,7 +34,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
--- NOTE: requires the fortune-mod package to work
+	-- NOTE: requires the fortune-mod package to work
 	-- local handle = io.popen("fortune")
 	-- local fortune = handle:read("*a")
 	-- handle:close()
@@ -51,7 +51,6 @@ dashboard.section.buttons.opts.hl = "Keyword"
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.opts)
-
 
 -- [
 -- \ '     ________ ;;     ________',
@@ -70,4 +69,3 @@ alpha.setup(dashboard.opts)
 -- \ '     |*/''   ;;;;;;',
 -- \ '              ;;',
 -- \]
-

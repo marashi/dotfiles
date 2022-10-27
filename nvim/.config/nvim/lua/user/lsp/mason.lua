@@ -4,7 +4,7 @@ local servers = {
 	"html",
 	"tsserver",
 	"jsonls",
-  "angularls"
+	"angularls",
 }
 
 local settings = {
