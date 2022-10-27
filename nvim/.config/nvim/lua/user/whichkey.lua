@@ -69,7 +69,7 @@ local setup = {
   },
 }
 
-local opts = {
+local normal_opts = {
   mode = "n", -- NORMAL mode
   prefix = "<leader>",
   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
@@ -78,7 +78,7 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
-local mappings = {
+local normal_mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -105,14 +105,17 @@ local mappings = {
     s = { "<cmd>PackerSync<cr>", "Sync" },
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
-  },
+ },
 
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    g = { "<cmd>DiffviewOpen<CR>", "Open Diff" },
+    x = { "<cmd>DiffviewClose<CR>", "Close Diff" },
+    l = { "<cmd>DiffviewFileHistory<CR>", "Current Branch History" },
+    h = { "<cmd>DiffviewFileHistory %<CR>", "Current File History" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-    l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+    w = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
     p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -135,24 +138,16 @@ local mappings = {
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     t = { "<cmd>TroubleToggle<cr>", "Trouble"},
     d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
+      "<cmd>TroubleToggle document_diagnostics<cr>",
       "Document Diagnostics",
     },
     w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+      "<cmd>TroubleToggle workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
     f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
+    I = { "<cmd>Mason<cr>", "Installer Info" },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
@@ -173,18 +168,26 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-
-  -- t = {
-  --   name = "Terminal",
-  --   n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-  --   u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-  --   t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-  --   p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-  --   f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-  --   h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-  --   v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-  -- },
 }
 
 which_key.setup(setup)
-which_key.register(mappings, opts)
+which_key.register(normal_mappings, normal_opts)
+
+local visual_opts = {
+  mode = "x", -- VISUAL mode
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+
+local visual_mappings = {
+  g = {
+    name = "Git",
+    h = { ":DiffviewFileHistory<CR>", "Current Branch History" },
+  },
+}
+
+which_key.register(visual_mappings, visual_opts)
+
