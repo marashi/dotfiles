@@ -132,6 +132,7 @@ alias ~="cd ~"
 #alias python="python3"
 alias cat="bat" # bat needs to be installed via brew
 alias lg="lazygit"
+alias o="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
 
 
 export VISUAL="nvim"
