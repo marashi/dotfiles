@@ -119,6 +119,7 @@ alias tls="t ls"
 alias tn="t new -t"
 
 alias vim="nvim"
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
 
 alias ws="cd ~/Workspace"
 alias dot="cd ~/dotfiles"
@@ -127,12 +128,11 @@ alias grep="grep --color=auto"
 alias reload='source ~/.zshrc'
 #alias update="sudo softwareupdate -i -a; brew update; brew upgrade; upgrade_oh_my_zsh"
 alias update="brew update; brew upgrade; omz update"
-alias path='echo -e ${PATH//:/\\n}'
+alias path='echo -e ${PATH//:/\\n} | fzf'
 alias ~="cd ~"
 #alias python="python3"
 alias cat="bat" # bat needs to be installed via brew
 alias lg="lazygit"
-alias o="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
 
 
 export VISUAL="nvim"
