@@ -133,7 +133,6 @@ alias ~="cd ~"
 #alias python="python3"
 alias cat="bat" # bat needs to be installed via brew
 alias lg="lazygit"
-alias alias="alias | fzf"
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
