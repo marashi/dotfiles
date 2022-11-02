@@ -26,7 +26,7 @@ nightfox.setup({
 		inverse = { -- Inverse highlight for different types
 			match_paren = false,
 			visual = true,
-			search = true,
+			search = false,
 		},
 		modules = { -- List of various plugins and additional options
 			-- ...
@@ -39,7 +39,15 @@ nightfox.setup({
 		},
 	},
 	specs = {},
-	groups = {},
+	groups = {
+		nightfox = {
+			Search = { bg = "palette.yellow", fg = "black" },
+		},
+	},
 })
+-- Debugging colors
+-- local palettes = require("nightfox.palette").load()
+-- local palette = require("nightfox.palette").load("nightfox")
+-- print(vim.inspect(palette))
 
 vim.cmd([[colorscheme nightfox]])
