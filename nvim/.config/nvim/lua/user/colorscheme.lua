@@ -25,8 +25,8 @@ nightfox.setup({
 		},
 		inverse = { -- Inverse highlight for different types
 			match_paren = false,
-			visual = false,
-			search = false,
+			visual = true,
+			search = true,
 		},
 		modules = { -- List of various plugins and additional options
 			-- ...
