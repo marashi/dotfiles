@@ -35,7 +35,7 @@ nightfox.setup({
 	palettes = {
 		nightfox = {
 			green = "#56a37d",
-			red = "#e6305a",
+			-- red = "#e6305a",
 		},
 	},
 	specs = {},
