@@ -7,7 +7,8 @@ colorizer.setup({
 	"css",
 	"scss",
 	"javascript",
-	html = {
-		mode = "foreground",
-	},
+	"html",
+	-- html = {
+	-- 	mode = "foreground",
+	-- },
 })
