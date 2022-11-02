@@ -91,9 +91,13 @@ local normal_mappings = {
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false, hidden = true})<cr>",
-		"Find files",
+		"Find Files",
 	},
-	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	["r"] = {
+		"<cmd>lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy{hidden = true})<cr>",
+		"Find Refs",
+	},
+	["t"] = { "<cmd>Telescope grep_string theme=ivy<cr>", "Find Text" },
 	-- ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["Y"] = { 'gg"+yG<CR>', "Copy File" },
 	["n"] = { '<cmd>let @+=expand("%:p")<CR>', "Copy Filename" },
