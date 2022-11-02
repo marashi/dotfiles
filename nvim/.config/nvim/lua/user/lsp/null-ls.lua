@@ -11,6 +11,7 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 --
 -- on_attach below is for auto-format on save
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	debug = false,
@@ -27,8 +28,7 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					vim.lsp.buf.formatting_sync()
+					vim.lsp.buf.format({ bufnr = bufnr })
 				end,
 			})
 		end
