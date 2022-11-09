@@ -123,7 +123,7 @@ alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview '
 
 alias ws="cd ~/Workspace"
 alias dot="cd ~/dotfiles"
-alias ll='exa --long --all --header --icons --git' 
+alias ll='exa --long --all --header --icons --git --group-directories-first' 
 alias grep="grep --color=auto"
 alias reload='source ~/.zshrc'
 #alias update="sudo softwareupdate -i -a; brew update; brew upgrade; upgrade_oh_my_zsh"
