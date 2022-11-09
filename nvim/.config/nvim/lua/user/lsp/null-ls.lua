@@ -17,7 +17,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({
-			extra_filetypes = { "toml" },
+			extra_filetypes = { "toml", "html" },
 		}),
 		formatting.stylua,
 	},
