@@ -10,7 +10,12 @@ export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export TERMINAL="alacritty"
 
+# FZF
 export FZF_DEFAULT_OPS="--extended"
+
+# N - Node Version Manager
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
