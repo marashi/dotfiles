@@ -76,6 +76,10 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+	if client.name == "html" then
+		client.server_capabilities.documentFormattingProvider = false
+	end
+
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
