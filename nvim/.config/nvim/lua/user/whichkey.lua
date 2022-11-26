@@ -80,6 +80,7 @@ local normal_opts = {
 
 local normal_mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+	["o"] = { "<cmd>lua require ('telescope').extensions.projects.projects{}<cr>", "Open Projects" },
 	b = {
 		name = "Buffers",
 		a = {
