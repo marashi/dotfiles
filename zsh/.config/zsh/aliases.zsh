@@ -8,7 +8,7 @@ alias path='echo -e ${PATH//:/\\n} | fzf'
 alias ~="cd ~"
 alias update="brew update; brew upgrade; zap --update"
 
-alias cat="bat" # bat needs to be installed via brew
+alias cat="bat --theme=ansi --style=numbers --color=always" # bat needs to be installed via brew
 alias grep="grep --color=auto"
 alias ll='exa --long --all --header --icons --git --group-directories-first'
 alias cp="cp -i"
@@ -23,7 +23,7 @@ alias tn="t new -t"
 
 # VIM
 alias vim="nvim"
-alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --theme=ansi --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
 
 # Git
 alias g='git'
