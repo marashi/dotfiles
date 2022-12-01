@@ -10,6 +10,7 @@ glow
 htop
 jq
 lazygit
+lazydocker
 neofetch
 neovim
 ranger

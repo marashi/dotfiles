@@ -51,3 +51,6 @@ alias gp='git push'
 alias gpd='git push --dry-run'
 alias lg="lazygit"
 
+# Docker
+alias ldo="lazydocker"
+
