@@ -5,6 +5,7 @@ local servers = {
 	"tsserver",
 	"jsonls",
 	"angularls",
+	"dockerls",
 }
 
 local settings = {
