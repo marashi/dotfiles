@@ -155,6 +155,7 @@ local normal_mappings = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		t = { "<cmd>TroubleToggle<cr>", "Trouble" },
+		o = { "<cmd>OrganizeImports<cr>", "Organize Imports" },
 		d = {
 			"<cmd>TroubleToggle document_diagnostics<cr>",
 			"Document Diagnostics",
