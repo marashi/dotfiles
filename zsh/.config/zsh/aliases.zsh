@@ -6,7 +6,7 @@ alias ws="cd ~/workspace"
 alias dot="cd ~/dotfiles"
 alias path='echo -e ${PATH//:/\\n} | fzf'
 alias ~="cd ~"
-alias update="brew update; brew upgrade; zap --update"
+alias update="brew update; brew upgrade; zap update"
 
 alias cat="bat --theme=ansi --style=numbers --color=always" # bat needs to be installed via brew
 alias grep="grep --color=auto"
