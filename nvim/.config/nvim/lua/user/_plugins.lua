@@ -56,12 +56,14 @@ return packer.startup(function(use)
 	-- UI / Colorschemes
 	use("EdenEast/nightfox.nvim")
 	use("goolord/alpha-nvim")
-	use("kyazdani42/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
-	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use("lukas-reineke/indent-blankline.nvim")
+
+	-- File browser
+	use("nvim-tree/nvim-tree.lua")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
