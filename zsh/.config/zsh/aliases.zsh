@@ -54,3 +54,7 @@ alias lg="lazygit"
 # Docker
 alias ldo="lazydocker"
 
+# NGINX
+alias ngx = "nvim /usr/local/etc/nginx"
+alias ngxr = "sudo nginx -s stop; sudo nginx"
+
