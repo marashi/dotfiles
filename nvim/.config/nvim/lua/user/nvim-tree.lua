@@ -13,8 +13,6 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,
-	open_on_setup = true,
-	ignore_ft_on_setup = { "alpha" },
 	hijack_cursor = true,
 	hijack_unnamed_buffer_when_opening = false,
 	update_cwd = true,
@@ -96,3 +94,25 @@ nvim_tree.setup({
 		},
 	},
 })
+
+local api_status_ok, nvim_tree_api = pcall(require, "nvim-tree.api")
+if not api_status_ok then
+	return
+end
+
+local function open_nvim_tree(data)
+	local IGNORED_FT = {
+		"alpha",
+	}
+
+	local filetype = vim.bo[data.buf].ft
+
+	if vim.tbl_contains(IGNORED_FT, filetype) then
+		return
+	end
+
+	-- open the tree but don't focus it
+	nvim_tree_api.tree.toggle({ focus = false })
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
