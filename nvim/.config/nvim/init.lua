@@ -1,6 +1,6 @@
+require("user.keymaps")
 require("user._plugins")
 require("user.options")
-require("user.keymaps")
 require("user.colorscheme")
 require("user.telescope")
 require("user.lualine")
