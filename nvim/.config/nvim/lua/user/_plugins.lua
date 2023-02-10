@@ -66,7 +66,7 @@ require("lazy").setup({
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
+		build = ":TSUpdate",
 	},
 	"nvim-treesitter/nvim-treesitter-context",
 
