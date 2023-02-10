@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 vim.cmd([[highlight IndentBlanklineIndent guifg=#86abdc gui=nocombine]])
-vim.cmd([[highlight IndentBlanklineContextSpaceChar guisp=#dbc074 gui=underline]])
+vim.cmd([[highlight IndentBlanklineContextChar guifg=#dcc074 gui=nocombine]])
 
 indent.setup({
 	-- for example, context is off by default, use this to turn it on
@@ -14,5 +14,3 @@ indent.setup({
 		"IndentBlanklineIndent",
 	},
 })
-
-vim.g.indent_blankline_show_current_context_start = false
