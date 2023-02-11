@@ -3,8 +3,8 @@ if not status_ok then
 	return
 end
 
-vim.cmd([[highlight IndentBlanklineIndent guifg=#86abdc gui=nocombine]])
-vim.cmd([[highlight IndentBlanklineContextChar guifg=#dcc074 gui=nocombine]])
+vim.cmd([[highlight IndentBlanklineIndent guifg=#232D41 gui=nocombine]])
+vim.cmd([[highlight IndentBlanklineContextChar guifg=#91855B gui=nocombine]])
 
 indent.setup({
 	-- for example, context is off by default, use this to turn it on
