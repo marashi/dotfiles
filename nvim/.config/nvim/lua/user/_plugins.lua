@@ -77,4 +77,10 @@ require("lazy").setup({
 
 	-- Project
 	"ahmedkhalf/project.nvim",
+
+	-- Terminal
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+	},
 })
