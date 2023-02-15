@@ -50,6 +50,7 @@ alias gm='git merge'
 alias gp='git push'
 alias gpd='git push --dry-run'
 alias lg="lazygit"
+alias gpr="GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout"
 
 # Docker
 alias ldo="lazydocker"
