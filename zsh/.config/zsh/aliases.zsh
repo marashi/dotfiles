@@ -61,6 +61,6 @@ alias ngx="nvim /usr/local/etc/nginx"
 alias ngxr="sudo nginx -s stop; sudo nginx"
 
 function get_gh_pr_number() {
-  GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}; gh pr diff {1} | delta --width=$(($(tput cols)/2-8))' --preview-window down --header-lines 3 | awk '{print $1}'
+  GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}; gh pr diff {1} | delta --width=$(($(tput cols)/2-8))' --header-lines 3 | awk '{print $1}'
 }
 
