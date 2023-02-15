@@ -50,7 +50,8 @@ alias gm='git merge'
 alias gp='git push'
 alias gpd='git push --dry-run'
 alias lg="lazygit"
-alias gpr="GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout"
+alias gpr="get_gh_pr_number | xargs gh pr checkout"
+alias gprw="get_gh_pr_number | xargs gh pr view -w"
 
 # Docker
 alias ldo="lazydocker"
@@ -58,4 +59,8 @@ alias ldo="lazydocker"
 # NGINX
 alias ngx="nvim /usr/local/etc/nginx"
 alias ngxr="sudo nginx -s stop; sudo nginx"
+
+function get_gh_pr_number() {
+  GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}; gh pr diff {1} | delta --width=$(($(tput cols)/2-8))' --preview-window down --header-lines 3 | awk '{print $1}'
+}
 
