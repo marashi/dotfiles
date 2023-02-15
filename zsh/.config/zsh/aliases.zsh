@@ -52,6 +52,7 @@ alias gpd='git push --dry-run'
 alias lg="lazygit"
 alias gpr="get_gh_pr_number | xargs gh pr checkout"
 alias gprw="get_gh_pr_number | xargs gh pr view -w"
+alias gcbr="git branch --sort=-committerdate | fzf --header 'Checkout Recent Branch' --preview 'gh pr diff {1} | delta --width=$(($(tput cols)/2-8))' --pointer='' | xargs git checkout"
 
 # Docker
 alias ldo="lazydocker"
@@ -63,4 +64,5 @@ alias ngxr="sudo nginx -s stop; sudo nginx"
 function get_gh_pr_number() {
   GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}; gh pr diff {1} | delta --width=$(($(tput cols)/2-8))' --header-lines 3 | awk '{print $1}'
 }
+
 
