@@ -20,6 +20,7 @@ null_ls.setup({
 			extra_filetypes = { "toml", "html" },
 		}),
 		formatting.stylua,
+		formatting.rustfmt,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

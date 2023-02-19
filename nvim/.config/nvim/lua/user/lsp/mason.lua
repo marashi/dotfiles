@@ -6,6 +6,7 @@ local servers = {
 	"jsonls",
 	"angularls",
 	"dockerls",
+	"rust_analyzer",
 }
 
 local settings = {
