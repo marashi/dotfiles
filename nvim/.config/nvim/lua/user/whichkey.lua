@@ -81,24 +81,6 @@ local normal_opts = {
 local normal_mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["o"] = { "<cmd>lua require ('telescope').extensions.projects.projects{}<cr>", "Open Projects" },
-	b = {
-		name = "Buffers",
-		a = {
-			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-			"All Buffers",
-		},
-		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-		["1"] = { "<cmd>lua require('bufferline').go_to_buffer(1, true)<cr>", "Go to Buffer 1" },
-		["2"] = { "<cmd>lua require('bufferline').go_to_buffer(2, true)<cr>", "Go to Buffer 2" },
-		["3"] = { "<cmd>lua require('bufferline').go_to_buffer(3, true)<cr>", "Go to Buffer 3" },
-		["4"] = { "<cmd>lua require('bufferline').go_to_buffer(4, true)<cr>", "Go to Buffer 4" },
-		["5"] = { "<cmd>lua require('bufferline').go_to_buffer(5, true)<cr>", "Go to Buffer 5" },
-		["6"] = { "<cmd>lua require('bufferline').go_to_buffer(6, true)<cr>", "Go to Buffer 6" },
-		["7"] = { "<cmd>lua require('bufferline').go_to_buffer(7, true)<cr>", "Go to Buffer 7" },
-		["8"] = { "<cmd>lua require('bufferline').go_to_buffer(8, true)<cr>", "Go to Buffer 8" },
-		["9"] = { "<cmd>lua require('bufferline').go_to_buffer(9, true)<cr>", "Go to Buffer 9" },
-		["$"] = { "<cmd>lua require('bufferline').go_to_buffer(-1, true)<cr>", "Go to last Buffer" },
-	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
@@ -118,6 +100,24 @@ local normal_mappings = {
 
 	["p"] = { "<cmd>Lazy<cr>", "Plugins" },
 
+	b = {
+		name = "Buffers",
+		a = {
+			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+			"All Buffers",
+		},
+		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+		["1"] = { "<cmd>lua require('bufferline').go_to_buffer(1, true)<cr>", "Go to Buffer 1" },
+		["2"] = { "<cmd>lua require('bufferline').go_to_buffer(2, true)<cr>", "Go to Buffer 2" },
+		["3"] = { "<cmd>lua require('bufferline').go_to_buffer(3, true)<cr>", "Go to Buffer 3" },
+		["4"] = { "<cmd>lua require('bufferline').go_to_buffer(4, true)<cr>", "Go to Buffer 4" },
+		["5"] = { "<cmd>lua require('bufferline').go_to_buffer(5, true)<cr>", "Go to Buffer 5" },
+		["6"] = { "<cmd>lua require('bufferline').go_to_buffer(6, true)<cr>", "Go to Buffer 6" },
+		["7"] = { "<cmd>lua require('bufferline').go_to_buffer(7, true)<cr>", "Go to Buffer 7" },
+		["8"] = { "<cmd>lua require('bufferline').go_to_buffer(8, true)<cr>", "Go to Buffer 8" },
+		["9"] = { "<cmd>lua require('bufferline').go_to_buffer(9, true)<cr>", "Go to Buffer 9" },
+		["$"] = { "<cmd>lua require('bufferline').go_to_buffer(-1, true)<cr>", "Go to last Buffer" },
+	},
 	g = {
 		name = "Git",
 		d = { "<cmd>DiffviewOpen<CR>", "Open Diff" },
