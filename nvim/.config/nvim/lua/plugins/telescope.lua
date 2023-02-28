@@ -87,13 +87,13 @@ telescope.setup({
 		-- Now the picker_config_key will be applied every time you call this
 		-- builtin picker
 		live_grep = {
-			path_display = { "shorten" },
-			additional_args = function(opts)
-				return { "--hidden" }
-			end,
+			path_display = { shorten = 3 },
+			-- additional_args = function(opts)
+			-- 	return { "--hidden" }
+			-- end,
 		},
 		grep_string = {
-			path_display = { "shorten" },
+			path_display = { shorten = 3 },
 		},
 	},
 	extensions = {

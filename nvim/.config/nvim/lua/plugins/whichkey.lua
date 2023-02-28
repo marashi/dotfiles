@@ -86,14 +86,19 @@ local normal_mappings = {
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
-		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false, hidden = true})<cr>",
+		"<cmd>lua require('matt.telescope').find_files()<cr>",
 		"Find Files",
 	},
-	["r"] = {
-		"<cmd>lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy{hidden = true})<cr>",
-		"Find Refs",
+	r = {
+		name = "Find Refs",
+		a = { "<cmd>lua require('matt.telescope').find_all_refs()<cr>", "Find All Refs" },
+		f = { "<cmd>lua require('matt.telescope').find_filtered_refs()<cr>", "Find Filtered Refs" },
 	},
-	["t"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	t = {
+		name = "Find Text",
+		a = { "<cmd>lua require('matt.telescope').find_all_text()<cr>", "Find All Text" },
+		f = { "<cmd>lua require('matt.telescope').find_filtered_text()<cr>", "Find Filtered Text" },
+	},
 	-- ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["Y"] = { 'gg"+yG<CR>', "Copy File" },
 	["n"] = { '<cmd>let @+=expand("%:p")<CR>', "Copy Filename" },
@@ -103,7 +108,7 @@ local normal_mappings = {
 	b = {
 		name = "Buffers",
 		a = {
-			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+			"<cmd>lua require('matt.telescope').list_buffers()<cr>",
 			"All Buffers",
 		},
 		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
