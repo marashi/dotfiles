@@ -75,9 +75,6 @@ require("lazy").setup({
 	"sindrets/diffview.nvim",
 	"tpope/vim-fugitive",
 
-	-- Project
-	"ahmedkhalf/project.nvim",
-
 	-- Terminal
 	{
 		"akinsho/toggleterm.nvim",

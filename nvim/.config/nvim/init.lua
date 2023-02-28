@@ -19,7 +19,6 @@ require("plugins.gitsigns")
 require("plugins.comment")
 require("plugins.trouble")
 require("plugins.indent-blankline")
-require("plugins.project")
 require("plugins.toggleterm")
 
 require("matt.globals")
