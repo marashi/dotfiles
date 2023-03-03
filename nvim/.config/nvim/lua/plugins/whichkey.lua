@@ -84,27 +84,15 @@ local normal_mappings = {
 	w = { "<cmd>w!<CR>", "Save" },
 	q = { "<cmd>q!<CR>", "Quit" },
 	h = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	f = { "<cmd>lua require('matt.telescope').find_files()<CR>", "Find Files" },
 	Y = { 'gg"+yG<CR>', "Copy File" },
 	n = { '<cmd>let @+=expand("%:p")<CR>', "Copy Filename" },
 	p = { "<cmd>Lazy<CR>", "Plugins" },
-
-	r = {
-		name = "Find Refs",
-		a = { "<cmd>lua require('matt.telescope').find_all_refs()<CR>", "Find All Refs" },
-		f = { "<cmd>lua require('matt.telescope').find_filtered_refs()<CR>", "Find Filtered Refs" },
-	},
-
-	t = {
-		name = "Find Text",
-		a = { "<cmd>lua require('matt.telescope').find_all_text()<CR>", "Find All Text" },
-		f = { "<cmd>lua require('matt.telescope').find_filtered_text()<CR>", "Find Filtered Text" },
-	},
 
 	b = {
 		name = "Buffers",
 		a = { "<cmd>lua require('matt.telescope').list_buffers()<CR>", "All Buffers" },
 		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+		s = { "<cmd>print('hello!')<cr>", "fuzz" },
 		["1"] = { "<cmd>lua require('bufferline').go_to_buffer(1, true)<CR>", "Go to Buffer 1" },
 		["2"] = { "<cmd>lua require('bufferline').go_to_buffer(2, true)<CR>", "Go to Buffer 2" },
 		["3"] = { "<cmd>lua require('bufferline').go_to_buffer(3, true)<CR>", "Go to Buffer 3" },
@@ -151,20 +139,29 @@ local normal_mappings = {
 		l = { "<cmd>lua vim.lsp.codelens.run()<CR>", "CodeLens Action" },
 		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", "Quickfix" },
 		r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
-		s = { "<cmd>Telescope lsp_document_symbols<CR>", "Document Symbols" },
-		S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", "Workspace Symbols" },
 	},
 
-	s = {
-		name = "Search",
-		b = { "<cmd>Telescope git_branches<CR>", "Checkout branch" },
-		c = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
-		h = { "<cmd>Telescope help_tags<CR>", "Find Help" },
-		M = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
-		r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" },
-		R = { "<cmd>Telescope registers<CR>", "Registers" },
-		k = { "<cmd>Telescope keymaps<CR>", "Keymaps" },
-		C = { "<cmd>Telescope commands<CR>", "Commands" },
+	f = {
+		name = "Find",
+		b = { "<cmd>lua require('matt.telescope').find_current_buffer()<CR>", "Find in Buffer" },
+		f = { "<cmd>lua require('matt.telescope').find_files()<CR>", "Find Files" },
+		s = { "<cmd>lua require('matt.telescope').find_current_symbols()<CR>", "Find Symbols in Buffer" },
+		R = { "<cmd>lua require('matt.telescope').find_all_refs()<CR>", "Find All Refs" },
+		r = { "<cmd>lua require('matt.telescope').find_filtered_refs()<CR>", "Find Filtered Refs" },
+		T = { "<cmd>lua require('matt.telescope').find_all_text()<CR>", "Find All Text" },
+		t = { "<cmd>lua require('matt.telescope').find_filtered_text()<CR>", "Find Filtered Text" },
+		x = {
+			name = "Extra",
+			b = { "<cmd>Telescope git_branches<CR>", "Checkout Branch" },
+			c = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
+			h = { "<cmd>Telescope help_tags<CR>", "Find Help" },
+			M = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
+			r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" },
+			R = { "<cmd>Telescope registers<CR>", "Registers" },
+			k = { "<cmd>Telescope keymaps<CR>", "Keymaps" },
+			C = { "<cmd>Telescope commands<CR>", "Commands" },
+			S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", "Workspace Symbols" },
+		},
 	},
 }
 

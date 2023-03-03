@@ -70,4 +70,22 @@ function M.list_buffers()
 	builtin.buffers(themes.get_dropdown(opts))
 end
 
+function M.find_current_buffer()
+	local opts = {
+		layout_config = { height = 0.70 },
+	}
+	local builtin = require("telescope.builtin")
+	local themes = require("telescope.themes")
+	builtin.current_buffer_fuzzy_find(themes.get_ivy(opts))
+end
+
+function M.find_current_symbols()
+	local opts = {
+		layout_config = { height = 0.70 },
+	}
+	local builtin = require("telescope.builtin")
+	local themes = require("telescope.themes")
+	builtin.lsp_document_symbols(themes.get_ivy(opts))
+end
+
 return M
