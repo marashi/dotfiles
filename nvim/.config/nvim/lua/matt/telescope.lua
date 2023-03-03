@@ -2,6 +2,8 @@ local M = {}
 
 local ignore_patterns = {
 	"%.spec.*",
+	"%.lock$",
+	"%-lock.json",
 }
 
 function M.find_files()
