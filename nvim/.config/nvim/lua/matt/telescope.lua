@@ -82,7 +82,7 @@ end
 
 function M.find_current_symbols()
 	local opts = {
-		layout_config = { height = 0.70, preview_width = 0.60 },
+		layout_config = { width = 0.70, preview_width = 0.70 },
 	}
 	local builtin = require("telescope.builtin")
 	builtin.lsp_document_symbols(opts)
