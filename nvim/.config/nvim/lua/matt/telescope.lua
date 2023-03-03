@@ -9,6 +9,7 @@ function M.find_files()
 		previewer = false,
 		hidden = true,
 		layout_config = { width = 0.70 },
+		path_display = { "truncate" },
 	}
 	local builtin = require("telescope.builtin")
 	local themes = require("telescope.themes")
