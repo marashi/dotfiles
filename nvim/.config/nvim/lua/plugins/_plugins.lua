@@ -38,7 +38,7 @@ require("lazy").setup({
 	"nvim-tree/nvim-tree.lua",
 
 	-- Telescope
-	"nvim-telescope/telescope.nvim",
+	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 
 	-- cmp plugins
