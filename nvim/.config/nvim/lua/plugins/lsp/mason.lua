@@ -7,6 +7,7 @@ local servers = {
 	"angularls",
 	"dockerls",
 	"rust_analyzer",
+	"eslint",
 }
 
 local settings = {
