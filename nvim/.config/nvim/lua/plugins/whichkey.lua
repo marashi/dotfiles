@@ -84,15 +84,19 @@ local normal_mappings = {
 	w = { "<cmd>w!<CR>", "Save" },
 	q = { "<cmd>q!<CR>", "Quit" },
 	h = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	Y = { 'gg"+yG<CR>', "Copy File" },
-	n = { '<cmd>let @+=expand("%:p")<CR>', "Copy Filename" },
 	p = { "<cmd>Lazy<CR>", "Plugins" },
+	n = { "<cmd>lua require('harpoon.ui').nav_next()<CR>", "Harppon Next" },
+	v = { "<cmd>lua require('harpoon.ui').nav_prev()<CR>", "Harppon Prev" },
+	c = {
+		name = "Copy",
+		Y = { 'gg"+yG<CR>', "Copy File" },
+		n = { '<cmd>let @+=expand("%:p")<CR>', "Copy Filename" },
+	},
 
 	b = {
 		name = "Buffers",
-		a = { "<cmd>lua require('matt.telescope').list_buffers()<CR>", "All Buffers" },
+		a = { "<cmd>lua require('matt.telescop').list_buffers()<CR>", "All Buffers" },
 		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-		s = { "<cmd>print('hello!')<cr>", "fuzz" },
 		["1"] = { "<cmd>lua require('bufferline').go_to_buffer(1, true)<CR>", "Go to Buffer 1" },
 		["2"] = { "<cmd>lua require('bufferline').go_to_buffer(2, true)<CR>", "Go to Buffer 2" },
 		["3"] = { "<cmd>lua require('bufferline').go_to_buffer(3, true)<CR>", "Go to Buffer 3" },
@@ -103,6 +107,8 @@ local normal_mappings = {
 		["8"] = { "<cmd>lua require('bufferline').go_to_buffer(8, true)<CR>", "Go to Buffer 8" },
 		["9"] = { "<cmd>lua require('bufferline').go_to_buffer(9, true)<CR>", "Go to Buffer 9" },
 		["$"] = { "<cmd>lua require('bufferline').go_to_buffer(-1, true)<CR>", "Go to last Buffer" },
+		x = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Harppon add file" },
+		m = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "Harppon Menu" },
 	},
 
 	g = {

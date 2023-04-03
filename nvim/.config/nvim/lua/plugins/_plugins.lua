@@ -34,8 +34,9 @@ require("lazy").setup({
 	"norcalli/nvim-colorizer.lua",
 	"lukas-reineke/indent-blankline.nvim",
 
-	-- File browser
+	-- File browser / Nav
 	"nvim-tree/nvim-tree.lua",
+	"ThePrimeagen/harpoon",
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
