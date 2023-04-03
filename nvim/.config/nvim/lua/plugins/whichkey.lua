@@ -128,17 +128,24 @@ local normal_mappings = {
 
 	l = {
 		name = "LSP",
-		a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
+		a = { "<cmd>Lspsaga code_action<CR>", "Code Action" },
 		t = { "<cmd>TroubleToggle<CR>", "Trouble" },
 		o = { "<cmd>OrganizeImports<CR>", "Organize Imports" },
-		d = { "<cmd>TroubleToggle document_diagnostics<CR>", "Document Diagnostics" },
-		w = { "<cmd>TroubleToggle workspace_diagnostics<CR>", "Workspace Diagnostics" },
-		f = { "<cmd>lua vim.lsp.buf.format{async=true}<CR>", "Format" },
+		O = { "<cmd>Lspsaga outline<CR>", "Outline" },
+		F = { "<cmd>lua vim.lsp.buf.format{async=true}<CR>", "Format" },
+		f = { "<cmd>Lspsaga lsp_finder<CR>", "Finder" },
 		i = { "<cmd>LspInfo<CR>", "Info" },
 		I = { "<cmd>Mason<CR>", "Installer Info" },
-		l = { "<cmd>lua vim.lsp.codelens.run()<CR>", "CodeLens Action" },
 		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", "Quickfix" },
-		r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
+		r = { "<cmd>Lspsaga rename<CR>", "Rename in buffer" },
+		d = {
+			name = "Diagnostics",
+			d = { "<cmd>TroubleToggle document_diagnostics<CR>", "Document Troubles" },
+			w = { "<cmd>TroubleToggle workspace_diagnostics<CR>", "Workspace Troubles" },
+			l = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Line Diagnostics" }, -- You can pass argument ++unfocus to unfocus the show_line_diagnostics floating window
+			b = { "<cmd>Lspsaga show_buf_diagnostics<CR>", "Buffer Diagnostics" },
+			c = { "<cmd>Lspsaga show_cursor_diagnostics<CR>", "Under Cursor Diagnostics" },
+		},
 	},
 
 	f = {

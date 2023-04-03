@@ -53,6 +53,7 @@ require("lazy").setup({
 	-- snippets
 	"L3MON4D3/LuaSnip", --snippet engine
 	"rafamadriz/friendly-snippets", -- a bunch of snippets to use
+	"mattn/emmet-vim",
 
 	-- LSP
 	"neovim/nvim-lspconfig",
@@ -61,6 +62,14 @@ require("lazy").setup({
 	"jose-elias-alvarez/null-ls.nvim",
 	"RRethy/vim-illuminate",
 	"folke/trouble.nvim",
+	{
+		"glepnir/lspsaga.nvim",
+		event = "LspAttach",
+		dependencies = {
+			{ "nvim-tree/nvim-web-devicons" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	},
 
 	-- Treesitter
 	{

@@ -19,7 +19,8 @@ configs.setup({
 		"json",
 		"jsdoc",
 		"lua",
-		"markdown",
+		"markdown", -- required for lspsaga
+		"markdown_inline", -- required for lspsaga
 		"python",
 		"rust",
 		"scss",
