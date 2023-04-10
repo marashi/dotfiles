@@ -3,8 +3,8 @@ live_config_reload: true
 window:
   opacity: 0.97
   padding:
-    x: 16
-    y: 15
+    x: 14
+    y: 10
   dynamic_padding: false
   decorations: buttonless
 
