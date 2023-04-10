@@ -25,3 +25,5 @@ tree
 yabai
 zoxide
 delta (aka git-delta)
+wget
+prettier
