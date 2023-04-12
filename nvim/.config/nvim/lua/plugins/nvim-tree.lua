@@ -17,7 +17,6 @@ nvim_tree.setup({
 		adaptive_size = true,
 		side = "left",
 		width = 40,
-		hide_root_folder = true,
 		signcolumn = "yes",
 	},
 	git = {
@@ -34,6 +33,7 @@ nvim_tree.setup({
 	},
 	renderer = {
 		group_empty = true,
+		root_folder_label = false,
 		highlight_git = false,
 		highlight_opened_files = "none",
 
@@ -86,24 +86,24 @@ nvim_tree.setup({
 	},
 })
 
-local api_status_ok, nvim_tree_api = pcall(require, "nvim-tree.api")
-if not api_status_ok then
-	return
-end
+-- local api_status_ok, nvim_tree_api = pcall(require, "nvim-tree.api")
+-- if not api_status_ok then
+-- 	return
+-- end
+--
+-- local function open_nvim_tree(data)
+-- 	local IGNORED_FT = {
+-- 		"alpha",
+-- 	}
+--
+-- 	local filetype = vim.bo[data.buf].ft
+--
+-- 	if vim.tbl_contains(IGNORED_FT, filetype) then
+-- 		return
+-- 	end
+--
+-- 	-- open the tree but don't focus it
+-- 	nvim_tree_api.tree.toggle({ focus = false })
+-- end
 
-local function open_nvim_tree(data)
-	local IGNORED_FT = {
-		"alpha",
-	}
-
-	local filetype = vim.bo[data.buf].ft
-
-	if vim.tbl_contains(IGNORED_FT, filetype) then
-		return
-	end
-
-	-- open the tree but don't focus it
-	nvim_tree_api.tree.toggle({ focus = false })
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
