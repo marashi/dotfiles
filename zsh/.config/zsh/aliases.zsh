@@ -22,7 +22,7 @@ alias tls="t ls"
 alias tn="t new -t"
 
 # VIM
-alias vim="nvim-chad nvim"
+alias vim="nvim-chad"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --theme=ansi --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
 
 # Nvim 
