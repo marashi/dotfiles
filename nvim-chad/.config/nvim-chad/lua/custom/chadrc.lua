@@ -8,6 +8,9 @@ M.ui = {
 	statusline = {
 		theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
 	},
+	cmp = {
+		style = "flat_light", -- default/flat_light/flat_dark/atom/atom_colored
+	},
 	nvdash = {
 		load_on_startup = true,
 
