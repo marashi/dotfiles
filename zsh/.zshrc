@@ -1,6 +1,6 @@
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
-# Example install plugins
+# Zap plugins
 plug "zap-zsh/supercharge"
 plug "zap-zsh/vim"
 plug "zsh-users/zsh-autosuggestions"

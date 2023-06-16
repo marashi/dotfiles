@@ -21,10 +21,6 @@ alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
 
-# VIM
-alias vim="nvim-chad"
-alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --theme=ansi --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
-
 # Nvim 
 alias nvim-lazy="NVIM_APPNAME=lazy-vim nvim"
 alias nvim-chad="NVIM_APPNAME=nvim-chad nvim"
@@ -43,6 +39,10 @@ function nvims() {
 
 bindkey -s '^A' 'nvim\n'
 
+
+# VIM
+alias vim="nvim-chad"
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --theme=ansi --style=numbers --color=always --line-range :500 {}' -w 150 | xargs -I {} sh -c 'NVIM_APPNAME=nvim-chad nvim {}'"
 
 # Git
 alias g='git'
@@ -77,7 +77,7 @@ alias gcbr="git branch --sort=-committerdate | fzf --header 'Checkout Recent Bra
 alias ldo="lazydocker"
 
 # NGINX
-alias ngx="nvim /usr/local/etc/nginx"
+alias ngx="vim /usr/local/etc/nginx"
 alias ngxr="sudo nginx -s stop; sudo nginx"
 
 function get_gh_pr_number() {
