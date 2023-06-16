@@ -37,9 +37,6 @@ function nvims() {
   NVIM_APPNAME=$config nvim $@
 }
 
-bindkey -s '^A' 'nvim\n'
-
-
 # VIM
 alias vim="nvim-chad"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --theme=ansi --style=numbers --color=always --line-range :500 {}' -w 150 | xargs -I {} sh -c 'NVIM_APPNAME=nvim-chad nvim {}'"
