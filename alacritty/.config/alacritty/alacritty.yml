@@ -15,7 +15,7 @@ scrolling:
 font:
   offset:
     x: 0
-    y: 4
+    y: 2
 
   normal:
     family: "Hack Nerd Font"
