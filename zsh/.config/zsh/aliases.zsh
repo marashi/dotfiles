@@ -22,8 +22,27 @@ alias tls="t ls"
 alias tn="t new -t"
 
 # VIM
-alias vim="nvim"
+alias vim="nvim-chad nvim"
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse --preview 'bat --theme=ansi --style=numbers --color=always --line-range :500 {}' -w 150 | xargs nvim"
+
+# Nvim 
+alias nvim-lazy="NVIM_APPNAME=lazy-vim nvim"
+alias nvim-chad="NVIM_APPNAME=nvim-chad nvim"
+
+function nvims() {
+  items=("default" "lazy-vim" "nvim-chad")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s '^A' 'nvim\n'
+
 
 # Git
 alias g='git'
@@ -64,5 +83,6 @@ alias ngxr="sudo nginx -s stop; sudo nginx"
 function get_gh_pr_number() {
   GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}; gh pr diff {1} | delta --width=$(($(tput cols)/2-8))' --header-lines 3 | awk '{print $1}'
 }
+
 
 
