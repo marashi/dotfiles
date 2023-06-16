@@ -59,8 +59,20 @@ local plugins = {
 		end,
 	},
 	{
-		"github/copilot.vim",
-		event = "InsertEnter",
+		"zbirenbaum/copilot.lua",
+		event = { "InsertEnter" },
+		cmd = { "Copilot" },
+		opts = {
+			suggestion = {
+				auto_trigger = true,
+				keymap = {
+					accept = "<A-\\>",
+					next = "<A-]>",
+					prev = "<A-[>",
+					dismiss = "<C-]>",
+				},
+			},
+		},
 	},
 }
 
