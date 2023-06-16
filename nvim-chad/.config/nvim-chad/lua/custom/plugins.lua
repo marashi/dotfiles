@@ -58,6 +58,10 @@ local plugins = {
 			require("custom.configs.lspconfig")
 		end,
 	},
+	{
+		"github/copilot.vim",
+		event = "InsertEnter",
+	},
 }
 
 return plugins
