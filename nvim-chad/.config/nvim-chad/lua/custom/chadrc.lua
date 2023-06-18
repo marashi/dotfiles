@@ -1,7 +1,3 @@
-vim.cmd([[
-  highlight Visual gui=reverse
-]])
-
 local M = {}
 M.ui = {
 	theme = "nightowl",
