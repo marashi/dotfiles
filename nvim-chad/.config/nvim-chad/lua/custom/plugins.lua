@@ -74,6 +74,14 @@ local plugins = {
 			},
 		},
 	},
+	{
+		"ggandor/leap.nvim",
+		keys = {
+			{ "S", "<Plug>(leap-backward-to)", mode = "n" },
+			{ "s", "<Plug>(leap-forward-to)", mode = "n" },
+			{ "gs", "<Plug>(leap-from-window)", mode = "n" },
+		},
+	},
 }
 
 return plugins
