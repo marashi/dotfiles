@@ -10,7 +10,7 @@ alias update="brew update; brew upgrade; zap update"
 
 alias cat="bat --theme=ansi --style=numbers --color=always" # bat needs to be installed via brew
 alias grep="grep --color=auto"
-alias ll='exa --long --all --header --icons --git --group-directories-first'
+alias ll='eza --long --all --header --icons --git --group-directories-first'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
